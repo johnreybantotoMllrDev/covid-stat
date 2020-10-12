@@ -1,0 +1,11 @@
+version: "3"
+services:
+  covid-stat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules # https://stackoverflow.com/a/32785014
+    ports:
+      - "4200:4200"
